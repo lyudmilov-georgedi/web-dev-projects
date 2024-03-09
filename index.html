@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RobotFactory</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <header>
+      <h1>Robot Factory</h1>
+      <a href="https://www.playtech.com/" target="_blank"><img src="images/playtech_logo.JPG" width="200px" height="50px"/></a>
+    </header>
+
+    <section id="slide-1" class="factory-section" style="display: none;">
+      <h1 class="ribbon" id="ribbon"><span>Basic Robot</span></h1>
+      <div class="content-wrapper row">
+        <!-- Robot Area -->
+        <div class="robot-area">
+          <div class="robot" id="robot-id">
+            <div class="robotHead">
+              <div class="robotEyes">
+                <div class="eye-left" id="eye-left-id"></div>
+                <div class="eye-right"></div>
+              </div>
+              <div class="mouth" id="mouth-id"></div>
+            </div>
+            <div class="robotBody">
+              <div class="arm"></div>
+              <div class="body" id="robotBody" style="display: block;">
+                <!-- <div class="male-body" id="maleRobotBody"></div>
+                <div class="female-body" id="femaleRobotBody" style="display: none;"></div> -->
+              </div>
+              <div class="female-body" id="robotFemaleBody" style="display: none"></div>
+              <div class="arm"></div>
+            </div>
+            <div class="robotLegs">
+              <div class="leg"></div>
+              <div class="leg"></div>
+            </div>
+          </div>
+          <div class="talk-bubble bubble-bottom-left" id="talk-bubble-id" style="display: none;"><p id="talk-bubble">..................</p></div>
+          <div class="robotName" id="robotName">Robot Name</div>
+        </div>
+        <!-- Paragrapth Area -->
+    		<div class="column paragraphs">
+    			<div class="paragraph-area area-one tooltip"><p class="two-lines" visible><b>P</b>aragraph text here. Text-align of left, 3% space from right border.
+    			  Text is only 2 lines and ends with 3 dots... because it is too long. On hover full text is shown as tooltip. First letter is bold.</p>
+    			  <p class="tooltip-text">Paragraph text here. Text-align of left, 3% space from right border.
+    				Text is only 2 lines and ends with 3 dots... because it is too long. On hover full text is shown as tooltip. First letter is bold.</p>
+    			</div>
+    			<div class="paragraph-area area-two"><p class="two-lines" visible><i>Paragraph</i> text here. Text justified. 6% space from right border.
+    			  Text is only 2 lines and ends with 3 dots... because it is too long. On hover full text is shown. First word is Italic.</p>
+    			</div>
+    			<div class="paragraph-area area-three row">
+    			  <img src="images/good-luck.jpg" width="150px" width="100px" visible/>
+    			  <p visible>Paragraph text here. Text-align on left, 9% from right border. Image on left side.</p>
+    			</div>
+    		</div>
+      </div>
+    </section>
+
+    <section class="factory-section form-section">
+      <h1>Create Robot</h1>
+      <hr />
+      <form>
+        <div class="row">
+          <div class="column">
+            <label for="robot-name">Name</label>
+            <input type="text" id="robot-name" placeholder="Robot Name"/>
+          </div>
+          <div class="column">
+            <label for="robot-type">Select Type</label>
+            <select id="robot-type">
+              <option value="default"></option>
+              <option value="male" id="maleRobotBodyOption">Male</option>
+              <option value="female" id="femaleRobotBodyOption">Female</option>
+            </select>
+          </div>
+          <div class="column">
+            <label for="robot-color">Select Color</label>
+            <input type="color" id="robot-color" value="#e96126">
+          </div>
+          <div class="column">
+            <label for="robot-option">Select Options</label>
+
+            <div class="row checkbox">
+              <input type="checkbox" name="can-jump" id="can-jump"/>
+              <label for="can-jump">can jump</label>
+            </div>
+
+            <div class="row checkbox">
+              <input type="checkbox" name="can-talk" id="can-talk" onclick="ShowHidePhrase()"/>
+              <label for="can-talk">can talk</label>
+            </div>
+
+            <div class="row checkbox">
+              <input type="checkbox" name="can-blink" id="can-blink"/>
+              <label for="can-blink">can blink</label>
+            </div>
+          </div>
+          <div class="column" id="phrase-area" style="visibility: hidden;"/>
+            <label>Phrase</label>
+            <textarea name="phrase-area" placeholder="Write phrase" rows="4"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <button class="button" id="createButton">Create</button>
+          <button class="button" id="showCreatedRobotsButton">Show Created Robots</button>
+        </div>
+      </form>
+      <hr />
+      <div class="empty-space"><div id="msg"><pre></pre></div></div>
+    </section>
+  </body>
+</html>

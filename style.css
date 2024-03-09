@@ -1,0 +1,441 @@
+header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 15px 35px;
+}
+
+header h1{
+	color: #0000FF;
+}
+
+h1{
+	text-transform: uppercase;
+	text-align:center;
+}
+
+p, img{
+	margin: 10px;
+	font-size: 32px;
+}
+
+.row{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.column{
+	display: flex;
+	flex-direction: column;
+	min-width: 250px;
+}
+
+.factory-section {
+	background-color: #F9EFB5;
+	margin: 0 35px 35px;
+	border: 1px solid;
+}
+
+/* Ribbon */
+.ribbon{
+	max-width:650px;
+	margin-top: 0;
+	border-bottom: 1px solid;
+	position:relative;
+	overflow:hidden;
+	display:block;
+	padding: 20px 0;
+}
+
+.ribbon:after{
+	content: "";
+	border: 1px solid;
+	-webkit-transform: rotate(135deg);
+	-webkit-transform-origin: 100% 100%;
+	position:absolute;
+	inset: -15px 35px 50%;
+}
+
+/* Robot text bubble */
+.talk-bubble {
+	margin: 40px;
+	display: block;
+	position: relative;
+	max-width: 200px;
+	height: auto;
+	left: 400px;
+	top: -30px;
+	border: 1px solid;
+	border-radius: 30px;
+	background-color: #FFF;
+}
+
+.bubble-bottom-left:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 30px;
+	right: auto;
+	top: auto;
+	bottom: -40px;
+	border: 20px solid;
+	border-color: #000 transparent transparent #000;
+}
+
+.bubble-bottom-left:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 31px;
+	right: auto;
+	top: auto;
+	bottom: -38px;
+	border: 20px solid;
+	border-color: #FFF transparent transparent #FFF;
+}
+
+.talk-bubble p{
+	padding: 10px;
+	text-align: center;
+	font-size: 20px;
+	line-height: 20px;
+}
+
+/* Flex container */
+.content-wrapper{
+	padding: 30px 50px 50px;
+}
+
+/* Robot Area */
+.robot-area{
+	position: relative;
+	height: 600px;
+	width: 600px;
+	border: 1px solid;
+	background-color: #FFF;
+	margin: 0 3% 35px 0;
+}
+
+/* Paragraph Area */
+.paragraphs{
+	flex: min-content;
+}
+
+.paragraph-area{
+	border: 1px solid;
+	margin-bottom: 35px;
+	background-color: #FFF;
+}
+
+/* Paragraph Area One */
+.area-one{
+	min-height: 200px;
+	padding-right: 3%;
+	margin-right: 3%;
+	text-align: left;
+}
+
+/* Paragraph Area Two */
+.area-two{
+	min-height: 160px;
+	padding-right: 6%;
+	margin-right: 6%;
+	text-align: justify;
+}
+
+/* Paragraph Area Three */
+.area-three{
+	min-height: 120px;
+	flex-wrap: nowrap;
+	padding-right: 9%;
+	margin-right: 9%;
+	text-align: left;
+}
+
+/* Tooltip */
+.tooltip{
+	position: relative;
+	display: inline-block;
+}
+
+.tooltip .tooltip-text{
+	visibility: hidden;
+	background-color: #FFA500;
+	text-align: center;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 0 15px;
+	position: absolute;
+	text-align: justify;
+}
+
+.tooltip:hover .tooltip-text{
+	visibility: visible;
+}
+
+/* Only two lines will show */
+.two-lines{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.area-two:hover p{
+	display: block;
+}
+
+/* Build robot */
+.robot{
+	position: relative;
+	top: 60px;
+}
+
+.robotHead{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	height: 100px;
+	width: 100px;
+	border-radius:50%;
+	border: 1px solid;
+}
+
+.robotEyes{
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	top: 20px;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+
+.robotEyes .eye-left{
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	border: 1px solid;
+	margin: 0 5px;
+}
+
+.robotEyes .eye-right{
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	border: 1px solid;
+	margin: 0 5px;
+}
+
+.robotHead .mouth{
+	position: absolute;
+	top: 72px;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	height: 10px;
+	width: 50px;
+	border-radius: 50%;
+	border: 1px solid;
+}
+
+.robotBody{
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	top: 100px;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+
+.robotBody .body{
+	border-top: 230px solid #FFA500;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	width: 100px;
+}
+
+.robotBody .female-body{
+	border-top:  130px solid #FFA500;
+	border-bottom: 100px solid #FFA500;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	width: 100px;
+}
+
+.robotBody .arm{
+	height: 150px;
+	width: 25px;
+	border: 1px solid;
+	border-radius: 10%;
+}
+
+.robotLegs{
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	top: 330px;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+
+.robotLegs .leg{
+	height: 150px;
+	width: 25px;
+	border: 1px solid;
+	border-radius: 10%;
+	margin: 0 10px;
+}
+
+.robotName{
+	position: absolute;
+	font-size: 28px;
+	text-transform: uppercase;
+	left: 50%;
+	bottom: 10px;
+	transform: translate(-50%, 0%);
+}
+
+/* Robot talking animation */
+/*.mouth{
+	transform-origin: left;
+	animation-name: mouth-animate;
+	animation-duration: 1s;
+	animation-timing-function: 1s ease-in-out;
+	animation-iteration-count: infinite;
+}*/
+
+@keyframes mouth-animate {
+	0% {  transform: scaleX(1) translate(-50%, 0%); }
+	50% { transform: scaleX(.3) translate(-50%, 0%); }
+	100% { transform: scaleX(1) translate(-50%, 0%); }
+}
+
+/* Robot blinking animation */
+/*.eye-left {
+	animation-name: eyes-animate;
+	animation-duration: 3s;
+	animation-timing-function: 2s linear;
+	animation-iteration-count: infinite;
+}*/
+
+@keyframes eyes-animate {
+	0% {  transform: scaleY(1); }
+	50% {  transform: scaleY(.1) }
+	100% {  transform: scaleY(1) }
+}
+
+/* Jump animation */
+/*.robot{
+	animation-name: jump-animate;
+	animation-duration: 2s;
+	animation-timing-function: 1s ease-out;
+	animation-iteration-count: infinite;
+}*/
+
+@keyframes jump-animate {
+	0% { transform: translateY(0); }
+	50% { transform: translateY(-50px); }
+	100% { transform: translateY(0); }
+}
+
+/* Fade-in amination effect */
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% {opacity: 1; }
+}
+
+.area-one p{
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-delay: 0s;
+	animation-timing-function: 2s ease-out;
+}
+
+.area-two p{
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-delay: 1s;
+	animation-timing-function: 2s ease-out;
+}
+
+.area-three img,
+.area-three p{
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-delay: 2s;
+	animation-timing-function: 2s ease-out;
+}
+
+/* Create robot section */
+.form-section{
+	background-color: #B6F5B3;
+}
+
+.form-section .row{
+	padding: 15px;
+}
+
+.form-section .column{
+	padding: 0 15px;
+	margin: 10px 0;
+}
+
+.form-section .checkbox{
+	padding: 0;
+}
+
+form{
+	font-size: 24px;
+}
+
+label{
+	padding-bottom: 10px;
+	width: 310px;
+}
+
+input, select, textarea, button{
+	font-size: 20px;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+input[type="color"]{
+	width: 100%;
+	height: 46px;
+	padding: 5px;
+}
+
+input[type="checkbox"]{
+	width: 24px;
+	height: 24px;
+	margin-right: 10px;
+}
+
+button{
+	margin: 12px;
+	width: 250px;
+}
+
+hr{
+	background-color: #000;
+	height: 1px;
+	border: none;
+}
+
+.empty-space{
+	height: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+	.robotName{ font-size: 24px; }
+	.robot-area, .area-one, .area-two, .area-three{ margin-right: 0; }
+	.area-three{ flex-wrap: wrap; }
+	.form-section .checkbox{ flex-wrap: nowrap; }
+}
+
+@media only screen and (min-width: 1065px) and (max-width: 1365px) {
+	.area-three{ flex-wrap: wrap; }
+}
