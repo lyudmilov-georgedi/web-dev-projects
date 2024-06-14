@@ -9,7 +9,10 @@
 <body>
   <div class="container">
     <h1>Tic Tac Toe</h1>
-    <button id="restartBtn" onclick="reset()">Restart</button>
+    <div>
+      <button id="vsPerson">vs Person</button>
+      <button id="vsComputer">vs Computer</button>
+    </div>
 
     <div id="board" class="board">
       <div class="cell" onclick="makeMove(0)"></div>
@@ -24,6 +27,8 @@
     </div>
     
     <p id="result"></p>
+
+    <button id="restartBtn" onclick="reset()">Restart</button>
   </div>
   <script src="script.js"></script>
 </body>
