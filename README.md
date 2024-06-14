@@ -6,7 +6,7 @@ Welcome to my web development projects showcase! This repository contains projec
 |---------------|--------------------------------------------------------------|-------------------------------------------|
 | Robot Factory | A fun and interactive web application that allows users to create and customize their own robots.  | [View Robot Factory](robot-factory/index.html) |
 | Task Manager  | A simple yet effective task management application that helps users keep track of their tasks. Users can add and delete tasks, as well as mark them as complete.  | [View Task Manager](task-manager/index.html)   |
-| Tic-Tac-Toe   | A classic game of Tic-Tac-Toe implemented in JavaScript. Players can play against each other and try to outsmart their opponent. | [Play Tic-Tac-Toe](tic-tac-toe/index.html)     |
+| Tic-Tac-Toe   | A classic game of Tic-Tac-Toe implemented in JavaScript. Players can play against each other or versus computer and try to outsmart their opponent. | [Play Tic-Tac-Toe](tic-tac-toe/index.html)     |
 
 ---
 
